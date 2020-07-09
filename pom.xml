@@ -23,31 +23,62 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <skipTests>true</skipTests>
         <dubbo.version>2.7.7</dubbo.version>
+        <mybatis.version>2.1.3</mybatis.version>
+        <mysql.version>8.0.20</mysql.version>
+        <durid.version>1.1.23</durid.version>
+        <pagehelper.version>1.2.13</pagehelper.version>
+        <hutool.version>5.3.8</hutool.version>
+        <mall-common.version>1.0-SNAPSHOT</mall-common.version>
+        <mall-goods-api.version>1.0-SNAPSHOT</mall-goods-api.version>
+        <mall-goods-service.version>1.0-SNAPSHOT</mall-goods-service.version>
+        <mall-manager-controller.version>1.0-SNAPSHOT</mall-manager-controller.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>net.arver.mall</groupId>
+                <artifactId>mall-common</artifactId>
+                <version>${mall-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.arver.mall</groupId>
+                <artifactId>mall-goods-api</artifactId>
+                <version>${mall-goods-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.arver.mall</groupId>
+                <artifactId>mall-goods-service</artifactId>
+                <version>${mall-goods-service.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.arver.mall</groupId>
+                <artifactId>mall-manager-controller</artifactId>
+                <version>${mall-manager-controller.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.3</version>
+                <version>${mybatis.version}</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.20</version>
+                <version>${mysql.version}</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
-                <version>1.1.23</version>
+                <version>${durid.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>1.2.13</version>
+                <version>${pagehelper.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
@@ -65,6 +96,12 @@
                         <artifactId>slf4j-log4j12</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <!--Hutool Java工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
         </dependencies>
@@ -86,7 +123,7 @@
                         <dependency>
                             <groupId>mysql</groupId>
                             <artifactId>mysql-connector-java</artifactId>
-                            <version>8.0.20</version>
+                            <version>${mysql.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>

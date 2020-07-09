@@ -10,19 +10,14 @@
     </parent>
     <groupId>net.arver.mall</groupId>
     <artifactId>mall-manager-controller</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>mall-manager-controller</name>
     <description>Demo project for Spring Boot</description>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>net.arver.mall</groupId>
             <artifactId>mall-goods-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

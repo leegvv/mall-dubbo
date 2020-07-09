@@ -18,7 +18,6 @@
         <dependency>
             <groupId>net.arver.mall</groupId>
             <artifactId>mall-goods-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
