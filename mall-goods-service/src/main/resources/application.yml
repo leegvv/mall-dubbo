@@ -8,6 +8,8 @@ spring:
     multipart:
       enabled: true #开启文件上传
       max-file-size: 10MB #限制文件上传大小为10M
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
 
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
@@ -42,6 +44,7 @@ secure:
       - /admin/info
       - /admin/logout
       - /minio/upload
+      -
 
 aliyun:
   oss:
@@ -75,6 +78,6 @@ dubbo:
     base-packages: net.arver.mall.goods.service.impl
   protocol:
     name: dubbo
-    port: 12345
+    port: 28000
   registry:
     address: zookeeper://127.0.0.1:2181

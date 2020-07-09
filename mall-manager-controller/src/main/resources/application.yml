@@ -69,3 +69,6 @@ logging:
 #  path: /var/logs #配置日志文件名称
 server:
   port: 9101
+dubbo:
+  consumer:
+    timeout: 5000
